@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         cbtn.setText("Compress Video");
 
 
-        btn = (Button) findViewById(R.id.cbtn);
+        btn = (Button) findViewById(R.id.btn);
         videoView = (VideoView) findViewById(R.id.vv);
 
         btn.setOnClickListener(new View.OnClickListener() {
