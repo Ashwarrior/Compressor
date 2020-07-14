@@ -19,9 +19,7 @@ import android.content.DialogInterface;
         import android.os.Environment;
         import android.provider.MediaStore;
         import android.app.AlertDialog;
-        import androidx.appcompat.app.AppCompatActivity;
-        import android.os.Bundle;
-        import android.util.Log;
+import android.util.Log;
         import android.view.View;
         import android.widget.Button;
         import android.widget.VideoView;
@@ -36,15 +34,19 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btn;
     private VideoView videoView;
-    private static final String VIDEO_DIRECTORY = "/demonuts";
+    private static final String VIDEO_DIRECTORY = "/video";
     private int GALLERY = 1, CAMERA = 2;
+    private Button cbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        cbtn=(Button) findViewById(R.id.cbtn);
+        cbtn.setText("Compress Video");
 
-        btn = (Button) findViewById(R.id.btn);
+
+        btn = (Button) findViewById(R.id.cbtn);
         videoView = (VideoView) findViewById(R.id.vv);
 
         btn.setOnClickListener(new View.OnClickListener() {
